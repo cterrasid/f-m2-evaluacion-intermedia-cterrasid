@@ -1,41 +1,31 @@
 'use strict';
-
-//desarrollar una página web con un juego de "Adivinar el número".
-
-//genera un número al azar entre 1 y 100, y el jugador tiene que adivinarlo. 
-const getRandomNumber = function getRandomNumber() {
-    return Math.ceil(Math.random() * 100);
-}
-
-
-//LLAMO AL INPUT Y LO GUARDO EN UNA VARIABLE
 const inputEl = document.querySelector('.game__input');
-//LLAMO AL BOTÓN Y LO GUARDO EN UNA VARIABLE
 const buttonEl = document.querySelector('.game__button');
-//LLAMO AL CONTADOR Y LO GUARDO EN UNA VARIABLE
 const counterEl = document.querySelector('.game__counter');
-//LLAMO AL FEEDBACK Y LO GUARDO EN UNA VARIABLE
 const feedbackEl = document.querySelector('.game__feedback');
 
-//ESCUCHO AL CLICK DEL BOTON
-buttonEl.addEventListener('click', handleButtonClick);
- 
-//3. MANEJO EL VALOR DEL INPUT
-function handleButtonClick() {
-    const inputValue = inputEl.value;
-    //LO MUESTRO EN LA CONSOLA
-    console.log(inputValue);
+//NÚMERO AL AZAR 
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
 }
-//4. COMPARAR CON EL NUMERO ALEATORIO
-function name() {
-    if (inputValue === getRandomNumber) {
+
+const randomNumber = getRandomNumber(100);
+console.log('Número Ganador: ', randomNumber);
+
+//EVENTO
+function handleButtonClick() {
+    const inputValue = parseInt(inputEl.value);
+    console.log('Elección del usuario: ', inputValue);
+    if (inputValue === randomNumber) {
         feedbackEl.innerHTML = (`¡Enhorabuena! ${inputValue} es el número ganador`)
-    } else if (inputValue > getRandomNumber) {
-        
-    }{
-        
+    } else if (inputValue > randomNumber) {
+        feedbackEl.innerHTML = (`${inputValue} es un número muy alto`)
+    } else if (inputValue < randomNumber) {
+        feedbackEl.innerHTML = (`${inputValue} es un número muy bajo`)
     }
 }
-    //SI EL VALOR DEL INPUT ES MUY ALTO, MUESTRO MENSAJE1 EN EL FEEDBACK
-    //SI EL VALOR DEL INPUT ES MUY BAJPO, MUESTRO MENSAJE2 EN EL FEEDBACK
-    //SI ACIERTA EL NUMERO, MUESTRO MENSAJE3 EN EL FEEDBACK
+
+buttonEl.addEventListener('click', handleButtonClick);
+
+//CONTADOR
+
