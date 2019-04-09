@@ -27,5 +27,3 @@ function handleButtonClick() {
 
 buttonEl.addEventListener('click', handleButtonClick);
 
-//CONTADOR
-
