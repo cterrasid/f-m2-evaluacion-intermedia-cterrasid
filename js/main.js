@@ -1,8 +1,13 @@
 'use strict';
+// ELEMENTOS DEL JUEGO
 const inputEl = document.querySelector('.game__input');
 const buttonEl = document.querySelector('.game__button');
-const counterEl = document.querySelector('.game__counter');
 const feedbackEl = document.querySelector('.game__feedback');
+//ELEMENTOS DEL CONTADOR
+const counterEl = document.querySelector('.game__counter');
+//defino el contenido del contador como una variable porque es un elemento cambiante
+    //lo inicio en 0
+let counterValue = 0;
 
 //NÚMERO AL AZAR 
 function getRandomNumber(max) {
@@ -29,9 +34,12 @@ function handleButtonClick() {
     } else if (inputValue < randomNumber) {
         feedbackEl.innerHTML = (`${inputValue} es un número muy bajo`)
     }
+
+    //CONTADOR
+    //Llamo a counterValue y le sumo 1 cada vez
+    counterValue += 1;
+    //asigno el valor del counter value al HTML
+    counterEl.innerHTML = counterValue;
+    //counterEl.innerHTML = parseInt(counterEl.innerHTML)+1;
+
 }
-
-
-//CONTADOR
-//Crear un contador que contabilice el numero de intentos del jugador
-    //Controlar el click del boton --> YA ESTA CON LA FUNCION handleButtonClick
