@@ -1,0 +1,13 @@
+@mixin gridContainer($display, $gridTempCol, $gridTempRw, $gridTempAr) {
+    display: $display;
+    grid-template-columns: $gridTempCol;
+    grid-template-rows: $gridTempRw;
+    grid-template-areas: $gridTempAr;
+}
+
+@mixin flex($display, $flex-direction, $justify-content, $align-items) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
