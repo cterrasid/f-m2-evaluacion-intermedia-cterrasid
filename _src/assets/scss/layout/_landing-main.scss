@@ -1,0 +1,53 @@
+.game__container{
+   @include gridContainer(grid, 1fr 1fr 1fr, 1fr 1fr 1fr 1fr, 
+   'title title counter' 
+   'title title counter'
+   'form form form'
+   'feedback feedback feedback');
+   @include gridBoxAlignment(center, center);
+   @include typography($fontFamily, $fontSizeM, $fontWeightXS)
+}
+
+.game__title{
+    grid-area: title;
+   @include typography($fontFamily, $fontSizeL, $fontWeightM)
+}
+
+.game__counter{
+    grid-area: counter;
+    border-radius: 80px;
+    border: 5px solid rgb(145, 13, 105);
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+.game__form{
+    grid-area: form;
+    @include gridContainer(grid, 1fr, 1fr 1fr 1fr, 
+    'title-input' 
+    'input' 
+    'btn' 
+    'reset');
+    @include gridBoxAlignment(center, center);
+}
+
+.game__input-title{
+    grid-area: title-input;
+}
+
+.game__input{
+    grid-area: input;
+}
+
+.game__button{
+    grid-area: btn;
+}
+
+.game__reset{
+    grid-area: reset;
+}
+
+.game__feedback{
+    grid-area: feedback;
+}

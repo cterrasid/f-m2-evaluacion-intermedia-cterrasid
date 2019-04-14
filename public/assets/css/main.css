@@ -1,0 +1,75 @@
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: white;
+}
+
+.game__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "title title counter" "title title counter" "form form form" "feedback feedback feedback";
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Comfortaa", cursive;
+  font-size: rem(16);
+  font-weight: 400;
+}
+
+.game__title {
+  grid-area: title;
+  font-family: "Comfortaa", cursive;
+  font-size: rem(18);
+  font-weight: 700;
+}
+
+.game__counter {
+  grid-area: counter;
+  border-radius: 80px;
+  border: 5px solid #910d69;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.game__form {
+  grid-area: form;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "title-input" "input" "btn" "reset";
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.game__input-title {
+  grid-area: title-input;
+}
+
+.game__input {
+  grid-area: input;
+}
+
+.game__button {
+  grid-area: btn;
+}
+
+.game__reset {
+  grid-area: reset;
+}
+
+.game__feedback {
+  grid-area: feedback;
+}
+
+/*# sourceMappingURL=main.css.map */
