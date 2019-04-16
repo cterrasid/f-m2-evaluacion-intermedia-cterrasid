@@ -8,36 +8,71 @@
 body {
   height: 100vh;
   background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "header";
 }
 
 .game__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "title title counter" "title title counter" "form form form" "feedback feedback feedback";
+  grid-template-rows: 70px 1fr 1fr;
+  grid-template-areas: "counter counter counter" "form form form" "feedback feedback feedback";
   justify-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   font-family: "Comfortaa", cursive;
-  font-size: rem(16);
+  font-size: rem(28);
   font-weight: 400;
+}
+
+.game__header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 10px 100px;
+  grid-template-areas: "title title title" "square square square" "subtitle subtitle subtitle";
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .game__title {
   grid-area: title;
+  font-family: "Monoton", cursive;
+  font-size: 50px;
+  font-weight: unset;
+}
+
+.decoration {
+  z-index: -1;
+  grid-area: square;
+  background-color: pink;
+  height: 200px;
+  width: 400px;
+}
+
+.game__subtitle {
+  grid-area: subtitle;
   font-family: "Comfortaa", cursive;
-  font-size: rem(18);
+  font-size: rem(56);
   font-weight: 700;
 }
 
 .game__counter {
   grid-area: counter;
-  border-radius: 80px;
+  display: inline-block;
+  justify-self: flex-end;
+  border-radius: 50%;
   border: 5px solid #910d69;
   height: 50px;
   width: 50px;
   text-align: center;
+  padding-top: 12px;
+  margin-right: 20px;
 }
 
 .game__form {
@@ -58,10 +93,34 @@ body {
 
 .game__input {
   grid-area: input;
+  width: 50px;
+  height: 50px;
+  display: block;
+  border: 5px solid grey;
+  border-radius: 15px;
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+.game__input:focus {
+  border: 1px solid #910d69;
 }
 
 .game__button {
   grid-area: btn;
+  width: 50px;
+  height: 30px;
+  display: block;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-family: "Comfortaa", cursive;
+  font-size: 10px;
+  text-align: center;
+}
+
+.game__button:focus {
+  border: 1px solid #910d69;
 }
 
 .game__reset {

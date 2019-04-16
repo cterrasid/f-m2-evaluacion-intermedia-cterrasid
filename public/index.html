@@ -6,21 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>f-m2-evaluacion-intermedia-cterrasid</title>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa"
+        <link href="https://fonts.googleapis.com/css?family=Cute+Font|Homemade+Apple|Monoton|Comfortaa"
         rel="stylesheet">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     
     <body>
-        <section class="game__container">
+        <header class="game__header">
              <h1 class="game__title">Adivina el número</h1>
+ <span class="decoration"></span>
 
+             <h2 class="game__subtitle">Si puedes...</h2>
+
+        </header>
+        <section class="game__container">
             <div class="game__counter"></div>
             <form class="game__form" action="" method="get">
                 <label class="game__input-title" for="number">Introduce aquí tu número</label>
-                <input class="game__input" type="number"
-                name="user_number" id="number" label="user_number" placeholder="Introduce aquí tu número"
-                required>
+                <input class="game__input" type="text"
+                name="user_number" id="number" label="user_number" required>
                 <button class="game__button" type="button">Prueba</button>
                 <button class="game__reset" type="reset">Reset</button>
             </form>
