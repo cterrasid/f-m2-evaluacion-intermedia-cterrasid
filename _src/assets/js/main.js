@@ -15,14 +15,12 @@ const randomNumber = getRandomNumber(100);
 
 function showFeedbackToUser() {
   const inputValue = parseInt(inputEl.value);
-  for (let inputValue = 0; inputValue <= 100; inputValue++) {
-    if (inputValue === randomNumber) {
-      getInnerHTMLFeedback(`¡Excelente! ${inputValue} es el número ganador`);
-    } else if (inputValue > randomNumber) {
-      getInnerHTMLFeedback(`${inputValue} es un número muy alto`);
-    } else if (inputValue < randomNumber) {
-      getInnerHTMLFeedback(`${inputValue} es un número muy bajo`);
-    }
+  if (inputValue === randomNumber) {
+    getInnerHTMLFeedback(`¡Excelente! ${inputValue} es el número ganador`);
+  } else if (inputValue > randomNumber) {
+    getInnerHTMLFeedback(`${inputValue} es un número muy alto`);
+  } else if (inputValue < randomNumber) {
+    getInnerHTMLFeedback(`${inputValue} es un número muy bajo`);
   }
   if (inputValue > 100) {
     getInnerHTMLFeedback('');

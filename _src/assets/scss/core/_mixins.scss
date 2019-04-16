@@ -28,12 +28,11 @@
     display: block;
     border: 5px solid grey;
     border-radius: 15px;
-    font-family: $fontFamily;
     font-size: 20px;
     text-align: center;
 
     &:focus {
-        border: 1px solid rgb(145, 13, 105);
+        border: 1px solid rgba(154, 206, 50, 0.644);
     }
 }
 
@@ -41,10 +40,9 @@
     grid-area: counter;
     display: inline-block;
     justify-self: flex-end;
-    border-radius: 50%;
-    border: 5px solid rgb(145, 13, 105);
-    height: 50px;
-    width: 50px;
+    border: 5px solid rgba(128, 128, 128, 0.562);
+    height: 100px;
+    width: 100px;
     text-align: center;
     padding-top: 12px;
     margin-right: 20px;
@@ -56,11 +54,10 @@
     display: block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-family: $fontFamily;
     font-size: 10px;
     text-align: center;
 
     &:focus {
-        border: 1px solid rgb(145, 13, 105);
+        border: 1px solid rgba(128, 128, 128, 0.562);
     }
 }

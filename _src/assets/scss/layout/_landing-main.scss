@@ -1,10 +1,10 @@
 .game__container{
-   @include gridContainer(grid, 1fr 1fr 1fr, 70px 1fr 1fr, 
+   @include gridContainer(grid, 1fr 1fr 1fr, 70px 280px 40px, 
    'counter counter counter'
    'form form form'
    'feedback feedback feedback');
    @include gridBoxAlignment(center, center);
-   @include typography($fontFamily, $fontSizeM, $fontWeightXS)
+   @include typography(unset, $fontSizeM, $fontWeightXS)
 }
 
 .game__header{
@@ -14,25 +14,28 @@
     'square square square'
     'subtitle subtitle subtitle');
     @include gridBoxAlignment(center, center);
+    padding-top: 100px;
 }
 
 .game__title{
     grid-area: title;
-
+    width: 315px;
+    text-align: center;
    @include typography($fontTitle, 50px, unset);
 }
 
 .decoration {
     z-index: -1;
+    align-self: self-end;
     grid-area: square;
-    background-color: pink;
-    height: 200px;
+    background-color: rgba(128, 128, 128, 0.562);
+    height: 70px;
     width: 400px;
 }
 
 .game__subtitle{
     grid-area: subtitle;
-   @include typography($fontFamily, $fontSizeL, $fontWeightM);
+   @include typography($fontSubtitle, $fontSizeL, $fontWeightM);
 }
 
 .game__counter{
@@ -69,4 +72,5 @@
 
 .game__feedback{
     grid-area: feedback;
+    font-family: $fontFeedback;
 }
