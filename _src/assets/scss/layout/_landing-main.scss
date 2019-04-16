@@ -67,10 +67,16 @@
 
 .game__reset{
     grid-area: reset;
+    @include button;
 
 }
 
 .game__feedback{
     grid-area: feedback;
     font-family: $fontFeedback;
+}
+
+.unvalid__number{
+    color: rgb(59, 6, 55);
+    font-size: 30px;
 }

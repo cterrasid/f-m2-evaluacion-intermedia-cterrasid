@@ -127,11 +127,27 @@ body {
 
 .game__reset {
   grid-area: reset;
+  width: 50px;
+  height: 30px;
+  display: block;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.game__reset:focus {
+  border: 1px solid rgba(128, 128, 128, 0.562);
 }
 
 .game__feedback {
   grid-area: feedback;
   font-family: "Homemade Apple", cursive;
+}
+
+.unvalid__number {
+  color: #3b0637;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

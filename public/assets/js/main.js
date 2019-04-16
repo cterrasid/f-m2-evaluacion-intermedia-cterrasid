@@ -23,11 +23,9 @@ function showFeedbackToUser() {
     getInnerHTMLFeedback(`${inputValue} es un número muy bajo`);
   }
   if (inputValue > 100) {
-    getInnerHTMLFeedback('');
-    alert(`${inputValue} no es un número válido`);
+    getInnerHTMLFeedback(`${inputValue} no es un número válido`);
   } else if (inputValue < 0) {
-    getInnerHTMLFeedback('');
-    alert(`${inputValue} no es un número válido`);
+    getInnerHTMLFeedback(`${inputValue} no es un número válido`);
   }
 }
 
@@ -46,9 +44,8 @@ function handleInputValue() {
 function handleButtonClick() {
   showFeedbackToUser();
   countUserClicks();
-  //   handleInputValue();
 }
 
 buttonEl.addEventListener('click', handleButtonClick);
-// inputEl.addEventListener('blur', handleInputValue);
+
 //# sourceMappingURL=main.js.map
