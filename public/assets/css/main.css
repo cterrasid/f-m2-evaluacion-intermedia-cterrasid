@@ -17,7 +17,7 @@ body {
 
 .game__container {
   display: grid;
-  grid-template-columns: 1fr 400px 1fr;
+  grid-template-columns: 1fr 400px 70px;
   grid-template-rows: 70px 280px 40px;
   grid-template-areas: "unset unset counter" "form form form" "feedback feedback feedback";
   justify-items: center;
@@ -74,9 +74,11 @@ body {
   border: 5px solid rgba(128, 128, 128, 0.562);
   height: 70px;
   width: 70px;
+  font-size: 20px;
   text-align: center;
   padding-top: 20px;
   align-self: center;
+  margin: 30px;
 }
 
 .game__form {

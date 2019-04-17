@@ -10,6 +10,7 @@ const unvalidNumber = ' no es un número válido';
 const winnerNumber = ' ¡Es el número ganador!';
 const lowNumberHint = ' es un número muy bajo';
 const highNumberHint = ' es un número muy alto';
+// const unvalidColor = document.classList('unvalid__number');
 const randomNumber = getRandomNumber(100);
 
 function getRandomNumber(max) {
@@ -18,6 +19,11 @@ function getRandomNumber(max) {
 
 const getInnerHTMLFeedback = (feedback) => {feedbackEl.innerHTML = feedback;};
 const feedbackMood = (userNumber, mood) => {getInnerHTMLFeedback(userNumber+mood);};
+
+// function unvalid(unvalidColor) {
+//   feedbackEl.classList.add(unvalidColor);
+//   feedbackEl.classList.remove(unvalidColor);
+// }
 
 function showFeedbackToUser() {
   const inputValue = parseInt(inputEl.value);
