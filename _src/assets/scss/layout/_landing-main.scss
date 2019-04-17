@@ -1,6 +1,6 @@
 .game__container{
-   @include gridContainer(grid, 1fr 1fr 1fr, 70px 280px 40px, 
-   'counter counter counter'
+   @include gridContainer(grid, 1fr 400px 1fr, 70px 280px 40px, 
+   'unset unset counter'
    'form form form'
    'feedback feedback feedback');
    @include gridBoxAlignment(center, center);
@@ -40,6 +40,7 @@
 
 .game__counter{
     @include counter;
+    align-self: center;
 }
 
 .game__form{

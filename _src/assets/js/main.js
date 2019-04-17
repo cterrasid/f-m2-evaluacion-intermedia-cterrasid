@@ -1,44 +1,43 @@
 'use strict';
 
+const inputEl = document.querySelector('.game__input');
+const inputValue = parseInt(inputEl.value);
+const buttonEl = document.querySelector('.game__button');
+const feedbackEl = document.querySelector('.game__feedback');
+const counterEl = document.querySelector('.game__counter');
+let counterValue = 0;
+const unvalidNumber = ' no es un número válido';
+const winnerNumber = ' ¡Es el número ganador!';
+const lowNumberHint = ' es un número muy bajo';
+const highNumberHint = ' es un número muy alto';
+const randomNumber = getRandomNumber(100);
+
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-function getInnerHTMLFeedback(feedback) {
-  const feedbackEl = document.querySelector('.game__feedback');
-  return feedbackEl.innerHTML = feedback;
-}
-
-const inputEl = document.querySelector('.game__input');
-const buttonEl = document.querySelector('.game__button');
-const randomNumber = getRandomNumber(100);
+const getInnerHTMLFeedback = (feedback) => {feedbackEl.innerHTML = feedback;};
+const feedbackMood = (userNumber, mood) => {getInnerHTMLFeedback(userNumber+mood);};
 
 function showFeedbackToUser() {
   const inputValue = parseInt(inputEl.value);
   if (inputValue === randomNumber) {
-    getInnerHTMLFeedback(`¡Excelente! ${inputValue} es el número ganador`);
+    feedbackMood(inputValue, winnerNumber);
   } else if (inputValue > randomNumber) {
-    getInnerHTMLFeedback(`${inputValue} es un número muy alto`);
+    feedbackMood(inputValue, highNumberHint);
   } else if (inputValue < randomNumber) {
-    getInnerHTMLFeedback(`${inputValue} es un número muy bajo`);
+    feedbackMood(inputValue, lowNumberHint);
   }
   if (inputValue > 100) {
-    getInnerHTMLFeedback(`${inputValue} no es un número válido`);
+    feedbackMood(inputValue, unvalidNumber);
   } else if (inputValue < 0) {
-    getInnerHTMLFeedback(`${inputValue} no es un número válido`);
+    feedbackMood(inputValue, unvalidNumber);
   }
 }
 
-const counterEl = document.querySelector('.game__counter');
-let counterValue = 0;
 function countUserClicks() {
   counterValue += 1;
   counterEl.innerHTML = counterValue;
-}
-
-function handleInputValue() {
-  const emptyInput = '';
-  inputValue === emptyInput;
 }
 
 function handleButtonClick() {

@@ -17,9 +17,9 @@ body {
 
 .game__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 400px 1fr;
   grid-template-rows: 70px 280px 40px;
-  grid-template-areas: "counter counter counter" "form form form" "feedback feedback feedback";
+  grid-template-areas: "unset unset counter" "form form form" "feedback feedback feedback";
   justify-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -72,11 +72,11 @@ body {
   display: inline-block;
   justify-self: flex-end;
   border: 5px solid rgba(128, 128, 128, 0.562);
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   text-align: center;
-  padding-top: 12px;
-  margin-right: 20px;
+  padding-top: 20px;
+  align-self: center;
 }
 
 .game__form {
@@ -101,7 +101,6 @@ body {
   height: 50px;
   display: block;
   border: 5px solid grey;
-  border-radius: 15px;
   font-size: 20px;
   text-align: center;
 }
